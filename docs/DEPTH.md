@@ -27,6 +27,7 @@
 | TRAP-15 | ug与mg | 静默采信错误值 | 统一mg/L | `app/modules/m2_contract/rules.py` | `tests/test_contract.py::test_contract_unit` |
 | TRAP-19 | 多质控失败 | 静默采信错误值 | 明确优先级 | `app/modules/m6_release/rules.py` | `tests/test_release.py::test_release_priority` |
 | TRAP-26 | 陈旧复测 | 静默采信错误值 | 版本递增 | `app/modules/m7_retest/rules.py` | `tests/test_retest.py::test_retest_stale` |
+| TRAP-27 | 复测名额争用 | 并发排程超额、重试重复占位、已开测被挪走 | 事务内复核容量+状态机+重试回候补 | `app/modules/m7_retest/schedule.py`、`schedule_store.py` | `tests/test_schedule.py`、`tests/test_schedule_store.py`、`tests/test_schedule_api.py` |
 
 ## 对账规则
 
